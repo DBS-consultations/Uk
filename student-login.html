@@ -3,44 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion Étudiant</title>
+    <title>Connexion - Université de Kara</title>
     <link rel="stylesheet" href="login-styles.css">
-    <header>
-        <div class="header-container">
-            <img src="logo.png" alt="Logo Université de Kara" class="logo">
-    </header>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Connexion à votre compte étudiant</h2>
-        <form id="loginForm">
-            <label for="username">Identifiant :</label>
-            <input type="text" id="username" name="username" required pattern="\d{9}" title="L'identifiant doit être composé de 9 chiffres.">
-            
-            <label for="password">Mot de passe :</label>
-            <input type="password" id="password" name="password" required pattern="\d{9}" title="Le mot de passe doit être composé de 9 chiffres.">
-            
-            <button type="submit" class="btn">Se connecter</button>
-        </form>
-    </div>
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="Logo Université de Kara" class="logo">
+        <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-menu">
+            <a href="#">Accueil</a>
+            <a href="#">Mon Profil</a>
+            <a href="#">Déconnexion</a>
+        </div>
+    </header>
 
-    <script>
-        // Écouteur d'événement pour la soumission du formulaire
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêche l'envoi classique du formulaire
+    <!-- Formulaire de Connexion -->
+    <main>
+        <div class="form-container">
+            <h1>Connexion Étudiant(e)</h1>
+            <form id="loginForm">
+                <label for="faculty">Choisissez votre Faculté :</label>
+                <select id="faculty" name="faculty" required>
+                    <option value="medecine">faculté des sciences de santé (FSS)</option>
+                    <option value="sciences">facultés des Sciences et Techniques (FAST)</option>
+                    <option value="sciences">facultés des Sciences Économiques et de la Gestion (FASEG)</option>
+                    <option value="sciences">facultés des Lettres et sciences ... (FLesh)</option
+                    <!-- Ajoutez plus de facultés si nécessaire -->
+                </select>
 
-            // Récupérer les données du formulaire
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
+                <label for="studentId">Identifiant Étudiant :</label>
+                <input type="text" id="studentId" name="studentId" placeholder="Ex : 123456789" required pattern="\d{9}">
 
-            // Vérification : le nom d'utilisateur et le mot de passe doivent être identiques et comporter 9 chiffres
-            if (username === password && /^[0-9]{9}$/.test(username)) {
-                // Simuler la redirection vers la page de tableau de bord (par exemple)
-                window.location.href = "dashboard.html"; // Remplacer "dashboard.html" par la page où tu veux rediriger l'utilisateur
-            } else {
-                alert("L'identifiant et le mot de passe doivent être identiques et comporter 9 chiffres.");
-            }
-        });
-    </script>
+                <label for="password">Mot de Passe :</label>
+                <input type="password" id="password" name="password" placeholder="Mot de Passe" required pattern="\d{9}2024">
+
+                <div id="errorNotification" class="error-message"></div>
+
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Université de Kara. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
