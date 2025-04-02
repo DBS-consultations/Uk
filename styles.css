@@ -1,120 +1,35 @@
 /* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
-body {
-    background-color: #003366; /* Arrière-plan bleu sombre */
-    color: white;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
 
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: relative;
-    z-index: 10;
-}
 
-.logo {
-    height: 40px;
-}
+body { background-color: #003366; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
 
-.hamburger-menu {
-    font-size: 30px;
-    cursor: pointer;
-}
+/* Header Styles */ header { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #002240; position: relative; z-index: 10; }
 
-.nav-menu {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #003366;
-    width: 200px;
-    height: 100vh;
-    padding-top: 50px;
-}
+.logo { height: 40px; }
 
-.nav-menu.active {
-    display: block;
-}
+.hamburger-menu { font-size: 30px; cursor: pointer; }
 
-.nav-menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    text-align: center;
-    font-size: 18px;
-}
+.nav-menu { display: none; position: absolute; top: 60px; right: 0; background-color: #003366; width: 200px; padding: 10px 0; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); }
 
-.nav-menu a:hover {
-    background-color: #0056b3;
-}
+.nav-menu.active { display: block; }
 
-/* Slide Section */
-.slides {
-    display: flex;
-    flex-direction: column; /* Organise les images en colonne */
-    align-items: center; /* Centre les images horizontalement */
-    justify-content: center;
-    height: auto; /* Ajuste la hauteur pour qu'elle s'adapte au contenu */
-    padding: 20px;
-}
+.nav-menu a { display: block; color: white; text-decoration: none; padding: 15px; text-align: center; font-size: 18px; }
 
-.slide {
-    margin-bottom: 20px; /* Espace entre les images */
-    width: 80%; /* Largeur de l'image (ajuste si nécessaire) */
-    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
-}
+.nav-menu a:hover { background-color: #0056b3; }
 
-.slide img {
-    width: 100%; /* Les images rempliront la largeur du conteneur */
-    height: auto; /* Hauteur automatique pour maintenir les proportions de l'image */
-    object-fit: cover; /* Remplit l'espace sans déformation */
-    object-position: center; /* Centre l'image dans son conteneur */
-    border-radius: 10px;
-}
+/* Slide Section */ .slides { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
 
-/* Footer Section */
-footer {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #002240;
-}
+.slide { margin-bottom: 20px; width: 80%; max-width: 100%; }
 
-footer h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+.slide img { width: 100%; height: auto; border-radius: 10px; }
 
-footer select {
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
+/* Footer Section */ footer { width: 100%; text-align: center; padding: 50px 20px; background-color: #002240; }
 
-footer button {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+footer h3 { font-size: 24px; margin-bottom: 20px; }
 
-footer button:hover {
-    background-color: #0056b3;
-}
+.btn { display: inline-block; background-color: #007BFF; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-size: 16px; transition: background 0.3s; }
+
+.btn:hover { background-color: #0056b3; }
+
