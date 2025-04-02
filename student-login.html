@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Étudiant</title>
+    <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Connexion à votre compte étudiant</h2>
+        <form id="loginForm">
+            <label for="username">Identifiant :</label>
+            <input type="text" id="username" name="username" required pattern="\d{9}" title="L'identifiant doit être composé de 9 chiffres.">
+            
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required pattern="\d{9}" title="Le mot de passe doit être composé de 9 chiffres.">
+            
+            <button type="submit" class="btn">Se connecter</button>
+        </form>
+    </div>
+
+    <script>
+        // Écouteur d'événement pour la soumission du formulaire
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi classique du formulaire
+
+            // Récupérer les données du formulaire
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Vérification : le nom d'utilisateur et le mot de passe doivent être identiques et comporter 9 chiffres
+            if (username === password && /^[0-9]{9}$/.test(username)) {
+                // Simuler la redirection vers la page de tableau de bord (par exemple)
+                window.location.href = "dashboard.html"; // Remplacer "dashboard.html" par la page où tu veux rediriger l'utilisateur
+            } else {
+                alert("L'identifiant et le mot de passe doivent être identiques et comporter 9 chiffres.");
+            }
+        });
+    </script>
+</body>
+</html>
