@@ -10,6 +10,10 @@ body {
     background-color: #003366; /* Arrière-plan bleu sombre */
     color: white;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Header Styles */
@@ -62,22 +66,22 @@ header {
 /* Slide Section */
 .slides {
     display: flex;
-    overflow: hidden;
+    flex-direction: column; /* Organise les images en colonne */
+    align-items: center; /* Centre les images horizontalement */
     justify-content: center;
-    align-items: center;
-    height: 80vh; /* Ajuste la hauteur des slides */
+    height: auto; /* Ajuste la hauteur pour qu'elle s'adapte au contenu */
+    padding: 20px;
 }
 
 .slide {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 20px; /* Espace entre les images */
+    width: 80%; /* Largeur de l'image (ajuste si nécessaire) */
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
 }
 
 .slide img {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Les images rempliront la largeur du conteneur */
+    height: auto; /* Hauteur automatique pour maintenir les proportions de l'image */
     object-fit: cover; /* Remplit l'espace sans déformation */
     object-position: center; /* Centre l'image dans son conteneur */
     border-radius: 10px;
