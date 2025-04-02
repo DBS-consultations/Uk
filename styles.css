@@ -7,167 +7,105 @@
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #003366; /* Arrière-plan bleu sombre */
+    color: white;
 }
 
 /* Header Styles */
 header {
-    background-color: #007BFF;
-    padding: 20px 0;
-}
-
-.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
 }
 
-header .logo {
-    font-size: 24px;
-    color: white;
+.logo {
+    height: 40px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Hero Section Styles */
-.hero {
-    background-image: url('https://via.placeholder.com/1920x800');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.hero .btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
+.hamburger-menu {
+    font-size: 30px;
     cursor: pointer;
 }
 
-.hero .btn:hover {
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #003366;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
     background-color: #0056b3;
 }
 
-/* New Students Section Styles */
-.new-students {
-    background-color: #e0e0e0;
+/* Slide Section */
+.slides {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.slide {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+footer {
     text-align: center;
     padding: 50px 20px;
+    background-color: #002240;
 }
 
-.new-students h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.new-students p {
-    font-size: 18px;
+footer h3 {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.new-students .btn {
+footer select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+footer button {
     background-color: #007BFF;
     color: white;
     padding: 12px 25px;
     border: none;
     font-size: 16px;
     border-radius: 5px;
-    text-decoration: none;
-}
-
-.new-students .btn:hover {
-    background-color: #0056b3;
-}
-
-/* Student Login Section Styles */
-.student-login {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.student-login h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.student-login p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.student-login form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.student-login label {
-    display: block;
-    margin: 10px 0 5px;
-    font-size: 16px;
-}
-
-.student-login input, .student-login select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.student-login button {
-    width: 100%;
-    padding: 12px 0;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    font-size: 18px;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-.student-login button:hover {
+footer button:hover {
     background-color: #0056b3;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
