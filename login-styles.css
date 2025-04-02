@@ -7,37 +7,91 @@
 }
 
 body {
-    background-color: #003366;
+    background-color: #003366; /* Arrière-plan bleu sombre */
     color: white;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
 }
 
-.login-container {
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.logo {
+    height: 40px; /* Ajuste la taille du logo */
+}
+
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #003366;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    background-color: #0056b3;
+}
+
+/* Connexion Form */
+.form-container {
     background-color: #002240;
     padding: 30px;
     border-radius: 10px;
-    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
+    text-align: center;
 }
 
-h2 {
-    font-size: 24px;
+.form-container h1 {
     margin-bottom: 20px;
 }
 
-input {
+input[type="text"], input[type="password"], select {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #003366;
+    color: white;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
-    background-color: #fff;
-    color: #333;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus {
+    border-color: #007BFF;
+    outline: none;
 }
 
 button {
@@ -48,9 +102,21 @@ button {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 16px;
+    display: none; /* Cacher le message d'erreur par défaut */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #002240;
 }
